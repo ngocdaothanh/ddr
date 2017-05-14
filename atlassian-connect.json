@@ -1,0 +1,177 @@
+{
+  "name": "Confluence Data Driven Roadmap",
+  "description": "A Confluence macro that renders data from tables into an interactive roadmap",
+  "key": "com.atlassian.confluence.roadmap.confluence-data-driven-roadmap",
+  "baseUrl": "http://ngocdaothanh.github.io/ddr/",
+  "vendor": {
+    "name": "Atlassian",
+    "url": "http://www.atlassian.com/"
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "apiVersion": 1,
+  "modules": {
+    "dynamicContentMacros": [
+      {
+        "key": "data-driven-roadmap",
+        "url": "/index.html?pageId={page.id}&relative-dates={relative-dates}&mindate={mindate}&maxdate={maxdate}&relspan={relspan}&startdate={startdate}&enddate={enddate}&effort={effort}&people={people}&swimlane={swimlane}&aggregate-swimlanes={aggregate-swimlanes}&title={title}&status={status}&showbody={showbody}",
+        "name": {
+          "value": "Confluence Data Driven Roadmap"
+        },
+        "bodyType": "rich-text",
+        "outputType": "block",
+        "editor": {
+          "url": "/index.html?editor=true",
+          "editTitle": {
+            "value": "Edit Roadmap"
+          },
+          "insertTitle": {
+            "value": "Insert Roadmap"
+          },
+          "width": "500px",
+          "height": "400px"
+        },
+        "parameters": [
+          {
+            "identifier": "relative-dates",
+            "name": {
+              "value": "Date range"
+            },
+            "description": {
+              "value": "You can either use a timespan relative to the current date or an absolute timespan"
+            },
+            "required": true,
+            "type": "enum",
+            "values": ["All", "Relative", "Absolute"],
+            "defaultValue": "All"
+          },
+          {
+            "identifier": "mindate",
+            "name": {
+              "value": "Min date"
+            },
+            "description": {
+              "value": "DD-MM-YYYY"
+            },
+            "type": "string"
+          },
+          {
+            "identifier": "maxdate",
+            "name": {
+              "value": "Max date"
+            },
+            "description": {
+              "value": "DD-MM-YYYY"
+            },
+            "type": "string"
+          },
+          {
+            "identifier": "relspan",
+            "name": {
+              "value": "Timespan"
+            },
+            "description": {
+              "value": "The number of months from today to show in the roadmap"
+            },
+            "type": "string",
+            "defaultValue": "6"
+          },
+          {
+            "identifier": "startdate",
+            "name": {
+              "value": "Start date columns"
+            },
+            "description": {
+              "value": "Comma delimited columns to use as start dates"
+            },
+            "type": "string",
+            "defaultValue": "Start date"
+          },
+          {
+            "identifier": "enddate",
+            "name": {
+              "value": "End date columns"
+            },
+            "description": {
+              "value": "Comma delimited columns to use as end dates"
+            },
+            "type": "string",
+            "defaultValue": "End date, Due date"
+          },
+          {
+            "identifier": "effort",
+            "name": {
+              "value": "Effort"
+            },
+            "type": "string",
+            "defaultValue": "Effort"
+          },
+          {
+            "identifier": "people",
+            "name": {
+              "value": "People"
+            },
+            "type": "string",
+            "defaultValue": "People"
+          },
+          {
+            "identifier": "swimlane",
+            "name": {
+              "value": "Swimlane columns"
+            },
+            "description": {
+              "value": "Comma delimited columns to use as swimlanes"
+            },
+            "type": "string",
+            "defaultValue": "Swimlane, Project"
+          },
+          {
+            "identifier": "aggregate-swimlanes",
+            "name": {
+              "value": "Aggregate swimlanes"
+            },
+            "description": {
+              "value": "Comma delimited list of words to use as Swimlanes if found in Swimlane field values"
+            },
+            "type": "string"
+          },
+          {
+            "identifier": "title",
+            "name": {
+              "value": "Title columns"
+            },
+            "description": {
+              "value": "Comma delimited columns to use as title values"
+            },
+            "type": "string",
+            "defaultValue": "Title, Summary"
+          },
+          {
+            "identifier": "status",
+            "name": {
+              "value": "Status columns"
+            },
+            "description": {
+              "value": "Comma delimited columns to use as status values"
+            },
+            "type": "string",
+            "defaultValue": "Status"
+          },
+          {
+            "identifier": "showbody",
+            "name": {
+              "value": "Show macro body"
+            },
+            "description": {
+              "value": "You can choose to show or hide the table contents within this macro"
+            },
+            "type": "boolean",
+            "defaultValue": "true"
+          }
+        ]
+      }
+    ]
+  },
+  "scopes": ["READ", "WRITE"]
+}
