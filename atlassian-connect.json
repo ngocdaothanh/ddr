@@ -2,7 +2,7 @@
   "name": "Confluence Data Driven Roadmap",
   "description": "A Confluence macro that renders data from tables into an interactive roadmap",
   "key": "com.atlassian.confluence.roadmap.confluence-data-driven-roadmap",
-  "baseUrl": "http://ngocdaothanh.github.io/ddr/",
+  "baseUrl": "http://ddr.servehttp.com",
   "vendor": {
     "name": "Atlassian",
     "url": "http://www.atlassian.com/"
