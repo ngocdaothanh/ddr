@@ -71,7 +71,7 @@
             var selector = '#roadmapmacro-' + id;
 
             var parseFunction = function () {
-                ddrParser.parse($("div.ddr#ddr-data-" + id), colOptions, dateFormat, language).then(function (data) {
+                ddrParser.parse($("div.ddr-data#ddr-data-" + id), colOptions, dateFormat, language).then(function (data) {
                     var container = d3.select(selector);
                     var roadmap = DataDrivenRoadmap.roadmap().startDate(startDate).endDate(endDate).data(data);
 
