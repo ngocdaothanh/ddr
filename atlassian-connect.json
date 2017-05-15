@@ -173,5 +173,5 @@
       }
     ]
   },
-  "scopes": ["READ", "WRITE"]
+  "scopes": ["READ"]
 }

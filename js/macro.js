@@ -82,7 +82,7 @@
 
                         // AP's existence means we are running in Connect plugin environment
                         if (window.AP) {
-                            window.AP.events.emit('com.atlassian.confluence.roadmap:confluence-data-driven-roadmap:redraw');
+                            window.AP.events.emit('com.atlassian.confluence.roadmap:confluence-data-driven-roadmap:draw');
                         }
                     }, 300);
 
